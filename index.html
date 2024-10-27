@@ -11,11 +11,27 @@
   <!-- title -->
   <title>Card Profile</title>
 
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net; img-src https://*; script-src 'self' 'unsafe-inline'; child-src 'none';"> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';" /> -->
+  
   <!-- csp -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src https://*; child-src 'none';">
+
+<!-- default-src 'self';: Mengatur sumber default untuk semua jenis konten yang tidak ditentukan secara eksplisit. 'self'
+berarti hanya memperbolehkan konten dari domain yang sama.
+
+script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;: Mengatur sumber yang diperbolehkan untuk skrip.
+Memperbolehkan skrip dari domain yang sama ('self'), skrip inline ('unsafe-inline'), dan dari CDN jsdelivr.net.
+
+style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;: Mengatur sumber yang diperbolehkan untuk CSS. Memperbolehkan
+CSS dari domain yang sama ('self'), CSS inline ('unsafe-inline'), dan dari CDN jsdelivr.net.
+
+img-src https://;*: Memperbolehkan gambar dari sumber HTTPS apa pun.
+
+child-src 'none';: Mencegah pemuatan konten dalam frame atau iframe dari sumber mana pun. -->
 
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100 w-md-75">
+<body class="d-flex justify-content-center align-items-center w-md-75">
   <div class="container ">
     <div class="card mt-3">
       <h4 class="text-center mt-3">Masukkan Nama</h4>
